@@ -7,7 +7,7 @@ It is an always-on-top software that collects sentences from clipboard every hal
 ## GUIDE
 
 Clipboard input:
-1. Run "cliptrans_v1.1.exe".
+1. Run "cliptrans.exe".
 2. Copy the sentences from other windows.
 3. The translated sentences will be shown in output box. 
 
