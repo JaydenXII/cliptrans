@@ -5,8 +5,8 @@ from time import sleep
 from tkinter import (BooleanVar, Button, END, Entry, Frame, INSERT, LEFT,
     Menu, RIGHT, Scrollbar, StringVar, Text, Tk, TOP, VERTICAL, Y)
 
-__author__ = "Jayden"
-__version__ = "0.2.0"
+__author__ = "JaydenXII"
+__version__ = "0.2.1"
 
 class MainFrame(Tk):
 
@@ -24,7 +24,7 @@ class MainFrame(Tk):
         self.resizable(0, 0)
         self.iconbitmap(r".\icon.ico")
         self.attributes("-topmost", True)
-        self.bind("<Return>", self.enterCommand)
+        #self.bind("<Return>", self.enterCommand)
 
         self.createMenu()
         self.createInputFrame()
@@ -78,6 +78,10 @@ class MainFrame(Tk):
         button.pack(side=RIGHT)
         self.entry.pack(side=LEFT, fill="y")
         frame_input.pack(side=TOP)
+        self.entry.bind(
+            "<Return>",
+            lambda event: [copy(self.text_input.get()), self.entry.select_range(0, END)]
+        )
     
     def createOutputFrame(self):
         frame_output = Frame(self, bd=1)
@@ -108,11 +112,7 @@ class MainFrame(Tk):
                 self.text.delete(1.0, END)
                 self.text.insert(INSERT, content)
                 self.text.config(state="disabled")
-            sleep(0.5)
-
-    def enterCommand(self, event):
-        copy(self.text_input.get())
-        self.entry.select_range(0, END)
+            sleep(0.1)
             
 if __name__ == "__main__":
     root = MainFrame()
