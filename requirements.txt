@@ -1,3 +1,2 @@
 googletrans
 pyperclip
-nuitka
