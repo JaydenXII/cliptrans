@@ -32,3 +32,6 @@ v0.1.1:
 v0.2.0: 
 - Users now can manually input the sentences you want to translate within 140 characters.
 - Dutch is added. 
+
+v0.2.1:
+- Sightly increase the translating speed. 
