@@ -82,6 +82,10 @@ class MainFrame(Tk):
             "<Return>",
             lambda event: [copy(self.text_input.get()), self.entry.select_range(0, END)]
         )
+        self.entry.bind(
+            "<Button-1>",
+            lambda event: self.entry.delete(0, END)
+        )
     
     def createOutputFrame(self):
         frame_output = Frame(self, bd=1)
