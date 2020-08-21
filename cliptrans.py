@@ -6,7 +6,7 @@ from tkinter import (BooleanVar, Button, END, Entry, Frame, INSERT, LEFT,
     Menu, RIGHT, Scrollbar, StringVar, Text, Tk, TOP, VERTICAL, Y)
 
 __author__ = "JaydenXII"
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 
 class MainFrame(Tk):
 
