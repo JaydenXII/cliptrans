@@ -24,7 +24,6 @@ class MainFrame(Tk):
         self.resizable(0, 0)
         self.iconbitmap(r".\icon.ico")
         self.attributes("-topmost", True)
-        #self.bind("<Return>", self.enterCommand)
 
         self.createMenu()
         self.createInputFrame()
@@ -83,8 +82,8 @@ class MainFrame(Tk):
             lambda event: [copy(self.text_input.get()), self.entry.select_range(0, END)]
         )
         self.entry.bind(
-            "<Button-1>",
-            lambda event: self.entry.delete(0, END)
+            "<ButtonRelease-1>",
+            lambda event: self.entry.select_range(0, END)
         )
     
     def createOutputFrame(self):
