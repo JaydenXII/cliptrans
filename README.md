@@ -35,3 +35,6 @@ v0.2.0:
 
 v0.2.1:
 - Sightly increase the translating speed. 
+
+v0.2.2:
+- All content will be selected when user left clicks the input box. 
